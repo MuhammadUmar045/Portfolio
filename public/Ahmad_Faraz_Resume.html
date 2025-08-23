@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Faraz - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+            font-size: 11pt;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+        }
+
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 14pt;
+            color: #34495e;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+            color: #7f8c8d;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary {
+            text-align: justify;
+            line-height: 1.5;
+            color: #2c3e50;
+            font-size: 11pt;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+
+        .skill-list {
+            list-style: none;
+            color: #34495e;
+            font-size: 10pt;
+        }
+
+        .skill-list li {
+            margin-bottom: 3px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .skill-list li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .experience-item {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 2px solid #ecf0f1;
+        }
+
+        .experience-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+            font-size: 12pt;
+        }
+
+        .experience-company {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 3px;
+            font-size: 11pt;
+        }
+
+        .experience-date {
+            color: #7f8c8d;
+            font-size: 9pt;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .experience-description {
+            color: #34495e;
+            line-height: 1.4;
+            font-size: 10pt;
+        }
+
+        .education-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            border-left: 2px solid #ecf0f1;
+        }
+
+        .education-degree {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+            font-size: 12pt;
+        }
+
+        .education-institution {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 3px;
+            font-size: 11pt;
+        }
+
+        .education-date {
+            color: #7f8c8d;
+            font-size: 9pt;
+            font-style: italic;
+        }
+
+        .education-details {
+            color: #34495e;
+            font-size: 10pt;
+            margin-top: 3px;
+        }
+
+        .project-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            border-left: 2px solid #ecf0f1;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+            font-size: 12pt;
+        }
+
+        .project-tech {
+            color: #3498db;
+            font-size: 9pt;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .project-description {
+            color: #34495e;
+            line-height: 1.4;
+            font-size: 10pt;
+        }
+
+        .certification-item {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            border-left: 2px solid #ecf0f1;
+        }
+
+        .certification-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+            font-size: 12pt;
+        }
+
+        .certification-issuer {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 3px;
+            font-size: 11pt;
+        }
+
+        .certification-date {
+            color: #7f8c8d;
+            font-size: 9pt;
+            font-style: italic;
+        }
+
+        .languages {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-left: 3px solid #3498db;
+        }
+
+        .language-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 11pt;
+        }
+
+        .language-level {
+            color: #7f8c8d;
+            font-size: 9pt;
+            font-style: italic;
+        }
+
+        @media print {
+            .container {
+                box-shadow: none;
+                padding: 10mm;
+            }
+            
+            body {
+                background: white;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10mm;
+            }
+            
+            .name {
+                font-size: 20pt;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">Ahmad Faraz</div>
+            <div class="title">Full Stack Web Developer</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>farazcui007@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+92 306 5371114</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Vehari, Pakistan</span>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <span>github.com/AhmadFaraz007</span>
+                </div>
+                <div class="contact-item">
+                    <span>💼</span>
+                    <span>linkedin.com/in/ahmad-faraz-007</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Aspiring Computer Science professional currently pursuing Bachelor's studies with a passion for learning new technologies. 
+                Experienced in developing responsive websites and dynamic web applications using modern technologies. 
+                Strong foundation in data structures, algorithms, and database management systems. 
+                Seeking opportunities to apply and grow skills in real-world projects while preparing for a dynamic tech career.
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="education-degree">Bachelor of Science in Computer Science</div>
+                <div class="education-institution">COMSATS University Islamabad, Vehari Campus</div>
+                <div class="education-date">2021 - 2025 (Expected Graduation)</div>
+                <div class="education-details">
+                    • Currently in 3rd year of studies<br>
+                    • GPA: 3.5/4.0 (Maintaining strong academic performance)<br>
+                    • Relevant Coursework: Data Structures & Algorithms, Database Management Systems, 
+                    Object-Oriented Programming, Digital Logic Design, Web Development, Computer Networks
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Web Development</h4>
+                    <ul class="skill-list">
+                        <li>HTML5/CSS3 (Advanced)</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js</li>
+                        <li>PHP</li>
+                        <li>TypeScript</li>
+                        <li>Tailwind CSS</li>
+                        <li>Bootstrap</li>
+                        <li>Next.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <ul class="skill-list">
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Object-Oriented Programming</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases & Systems</h4>
+                    <ul class="skill-list">
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>SQL</li>
+                        <li>Database Design</li>
+                        <li>Digital Logic Design</li>
+                        <li>Data Structures & Algorithms</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Technologies</h4>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>DevOps</li>
+                        <li>Postman</li>
+                        <li>Figma</li>
+                        <li>Stella Architect</li>
+                        <li>Vercel</li>
+                        <li>Netlify</li>
+                        <li>AJAX</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Experience & Projects -->
+        <div class="section">
+            <div class="section-title">Academic Experience & Projects</div>
+            
+            <div class="experience-item">
+                <div class="experience-title">Web Development Projects</div>
+                <div class="experience-company">Academic & Freelance</div>
+                <div class="experience-date">2021 - Present</div>
+                <div class="experience-description">
+                    • Developed responsive websites using HTML, CSS, JavaScript, and PHP<br>
+                    • Built front-end and back-end components of dynamic web applications<br>
+                    • Created 50+ projects including e-commerce platforms, educational portals, and management systems<br>
+                    • Implemented modern frameworks like React.js, Node.js, and Tailwind CSS<br>
+                    • Worked with 30+ worldwide clients on freelance projects
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title">Data Structures & Algorithms</div>
+                <div class="experience-company">Academic Projects</div>
+                <div class="experience-date">2022 - 2023</div>
+                <div class="experience-description">
+                    • Implemented common data structures (linked lists, trees, stacks, queues) using C++ and Java<br>
+                    • Developed algorithms for sorting, searching, and graph traversal<br>
+                    • Applied object-oriented programming principles including inheritance, polymorphism, and encapsulation<br>
+                    • Created efficient solutions for complex computational problems
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title">Database Management Systems</div>
+                <div class="experience-company">Academic Projects</div>
+                <div class="experience-date">2022 - 2023</div>
+                <div class="experience-description">
+                    • Created relational databases and managed SQL queries in academic projects<br>
+                    • Designed database schemas for various applications including e-commerce and educational systems<br>
+                    • Implemented data normalization and optimization techniques<br>
+                    • Worked with MySQL, MongoDB, and PostgreSQL databases
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title">Digital Logic Design</div>
+                <div class="experience-company">Academic Projects</div>
+                <div class="experience-date">2022</div>
+                <div class="experience-description">
+                    • Simulated logic circuits and binary operations using logic gates and software tools<br>
+                    • Designed and implemented digital circuits for various applications<br>
+                    • Worked with binary arithmetic and Boolean algebra<br>
+                    • Created circuit diagrams and verified functionality through simulation
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            
+            <div class="project-item">
+                <div class="project-title">AI Powered Space Mission and Satellite Tracking System</div>
+                <div class="project-tech">React, Node.js, MongoDB, Stripe, AI/ML</div>
+                <div class="project-description">
+                    Comprehensive full-stack platform for space mission planning, satellite tracking, and debris monitoring. 
+                    Features AI-powered predictions, real-time tracking, collision risk assessment, and 3D visualizations.
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Multi-Vendor E-commerce Platform</div>
+                <div class="project-tech">PHP, MySQL, Tailwind CSS, Payment Gateway</div>
+                <div class="project-description">
+                    Robust multi-vendor eCommerce platform with product browsing, secure shopping, and comprehensive admin dashboard 
+                    for managing vendors, products, orders, and customers.
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Smart Education Portal</div>
+                <div class="project-tech">JavaScript, PHP, MySQL, Analytics</div>
+                <div class="project-description">
+                    Centralized education platform with role-based dashboards for students, faculty, and admins. 
+                    Enables course exploration, enrollment, management, recommendations, and performance tracking.
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Gym Management System</div>
+                <div class="project-tech">Bootstrap, JavaScript, PHP, AI Recommendations</div>
+                <div class="project-description">
+                    Comprehensive gym management system with role-based dashboards for admins, trainers, and members. 
+                    Includes membership management, workout tracking, progress monitoring, and AI-powered fitness recommendations.
+                </div>
+            </div>
+        </div>
+
+        <!-- Certification -->
+        <div class="section">
+            <div class="section-title">Certification</div>
+            <div class="certification-item">
+                <div class="certification-title">Web Development Training</div>
+                <div class="certification-issuer">NesterSky Software House, Vehari</div>
+                <div class="certification-date">2023</div>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="languages">
+                <div class="language-item">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Good</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Urdu</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Punjabi</div>
+                    <div class="language-level">Native</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="section">
+            <div class="section-title">Additional Information</div>
+            <div class="summary">
+                <strong>Availability:</strong> Available for internships and entry-level opportunities<br>
+                <strong>Work Type:</strong> Internship, Freelance, Part-time<br>
+                <strong>Remote:</strong> Yes<br>
+                <strong>Time Zone:</strong> PKT (UTC+5)<br>
+                <strong>Expected Graduation:</strong> 2025<br>
+                <strong>Interests:</strong> Problem Solving, Continuous Learning, Team Collaboration, Analytical Thinking
+            </div>
+        </div>
+    </div>
+</body>
+</html>
