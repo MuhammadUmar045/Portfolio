@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
 const Hero = () => {
+  const [heroImageError, setHeroImageError] = useState(false);
+
   return (
     <section id="home" className="min-h-screen flex items-center bg-white relative overflow-hidden">
       <div className="grid lg:grid-cols-2 gap-0 items-center w-full h-full">
@@ -21,7 +23,7 @@ const Hero = () => {
               className="text-3xl lg:text-4xl font-bold gradient-text"
             >
               <span className="mr-2">👋</span>
-              Hi! I'm Ahmad Faraz
+              Hi! I'm Muhammad Umar Farooq
             </motion.div>
 
             {/* Theme Toggles */}
@@ -77,8 +79,8 @@ const Hero = () => {
                 Hire Me
               </Link>
               <a 
-                href="/Ahmad_Faraz_CV.pdf" 
-                download="Ahmad_Faraz_CV.pdf"
+                href="/umar_cv.pdf" 
+                download="umar_cv.pdf"
                 className="btn-secondary inline-flex items-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,15 +98,15 @@ const Hero = () => {
               className="grid grid-cols-3 gap-6 pt-8"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-1">30+</div>
+                <div className="text-3xl font-bold text-primary-600 mb-1">20+</div>
                 <div className="text-sm text-dark-600">Worldwide Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-1">50+</div>
+                <div className="text-3xl font-bold text-primary-600 mb-1">30+</div>
                 <div className="text-sm text-dark-600">Projects Done</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-1">5+</div>
+                <div className="text-3xl font-bold text-primary-600 mb-1">3+</div>
                 <div className="text-sm text-dark-600">Years Experience</div>
               </div>
             </motion.div>
@@ -121,24 +123,25 @@ const Hero = () => {
             <div className="relative z-20 flex items-center justify-center p-4">
               <div className="p-3 rounded-2xl bg-gradient-to-br from-slate-800/50 via-indigo-900/50 to-blue-800/50 shadow-2xl border border-white/10">
                 <img
-                  src="/ahmad-faraz.png"
-                  alt="Ahmad Faraz"
+                  src={`${process.env.PUBLIC_URL}/umar.png`}
+                  alt="Muhammad Umar Farooq"
                   className="w-auto h-auto max-w-[420px] max-h-[85vh] object-contain rounded-xl shadow-lg"
+                  onError={() => setHeroImageError(true)}
                   style={{
-                    boxShadow: '0 15px 35px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15)'
-                  }}
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
+                    boxShadow: '0 15px 35px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15)',
+                    display: heroImageError ? 'none' : 'block',
                   }}
                 />
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center" style={{ display: 'none' }}>
+            <div
+              className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center"
+              style={{ display: heroImageError ? 'flex' : 'none' }}
+            >
               <div className="text-center text-gray-600">
                 <div className="text-6xl mb-4">👨‍💻</div>
-                <p className="text-lg font-medium">Ahmad Faraz</p>
-                <p className="text-sm opacity-75">Add your photo to public/ahmad-faraz.png</p>
+                <p className="text-lg font-medium">Muhammad Umar Farooq</p>
+                <p className="text-sm opacity-75">Add your photo to public/umar.png</p>
               </div>
             </div>
           </motion.div>

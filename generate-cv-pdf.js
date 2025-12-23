@@ -6,12 +6,12 @@ async function generatePDF() {
   const page = await browser.newPage();
   
   // Load the HTML file
-  const htmlPath = path.join(__dirname, 'Ahmad_Faraz_CV.html');
+  const htmlPath = path.join(__dirname, 'public', 'Muhammad_Umar_Farooq_CV.html');
   await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
   
   // Generate PDF
   await page.pdf({
-    path: 'Ahmad_Faraz_CV.pdf',
+    path: 'public/umar_cv.pdf',
     format: 'A4',
     printBackground: true,
     margin: {
@@ -22,7 +22,7 @@ async function generatePDF() {
     }
   });
   
-  console.log('PDF generated successfully: Ahmad_Faraz_CV.pdf');
+  console.log('PDF generated successfully: public/umar_cv.pdf');
   await browser.close();
 }
 

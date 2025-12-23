@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 
 const Contact = () => {
@@ -20,11 +20,9 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+  const [submitErrorDetail, setSubmitErrorDetail] = useState('');
 
-  // Initialize EmailJS
-  useEffect(() => {
-    emailjs.init(EMAILJS_CONFIG.USER_ID);
-  }, []);
+  const emailjsPublicKey = EMAILJS_CONFIG.PUBLIC_KEY || EMAILJS_CONFIG.USER_ID;
 
   const handleChange = (e) => {
     setFormData({
@@ -37,21 +35,31 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setSubmitErrorDetail('');
     
     try {
       // Send email using EmailJS
-      const result = await emailjs.send(
-        EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: EMAILJS_CONFIG.TO_EMAIL,
-        },
-        EMAILJS_CONFIG.USER_ID
-      );
+        const result = await emailjs.send(
+          EMAILJS_CONFIG.SERVICE_ID,
+          EMAILJS_CONFIG.TEMPLATE_ID,
+          {
+            // Common EmailJS template variables (recommended)
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            reply_to: formData.email,
+
+            // Keep legacy keys too (in case your template uses these)
+            name: formData.name,
+            email: formData.email,
+            title: formData.subject,
+
+            // Recipient (if your template uses it)
+            to_email: EMAILJS_CONFIG.TO_EMAIL,
+          },
+          { publicKey: emailjsPublicKey }
+        );
       
       if (result.status === 200) {
         setSubmitStatus('success');
@@ -60,7 +68,11 @@ const Contact = () => {
         setSubmitStatus('error');
       }
     } catch (error) {
+      const status = error?.status;
+      const text = error?.text || error?.message;
+      const detail = [status, text].filter(Boolean).join(': ');
       console.error('Email sending failed:', error);
+      setSubmitErrorDetail(detail || 'Unknown error');
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -71,14 +83,14 @@ const Contact = () => {
     {
       icon: FiMail,
       title: 'Email',
-      value: 'farazcui007@gmail.com',
-      href: 'mailto:farazcui007@gmail.com',
+      value: 'mumarfarooqkhan45@gmail.com',
+      href: 'mailto:mumarfarooqkhan45@gmail.com',
     },
     {
       icon: FiPhone,
       title: 'Phone',
-      value: '+92 306 5371114',
-      href: 'tel:+923065371114',
+      value: '+92 3201226433',
+      href: 'tel:+923201226433',
     },
     {
       icon: FiMapPin,
@@ -194,7 +206,10 @@ const Contact = () => {
               {submitStatus === 'error' && (
                 <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
                   <p className="font-medium">Failed to send message.</p>
-                  <p className="text-sm">Please try again or contact me directly at farazcui007@gmail.com</p>
+                  {submitErrorDetail ? (
+                    <p className="text-sm">Reason: {submitErrorDetail}</p>
+                  ) : null}
+                  <p className="text-sm">Please try again or contact me directly at {EMAILJS_CONFIG.TO_EMAIL}</p>
                 </div>
               )}
               <div className="grid md:grid-cols-2 gap-6">
@@ -225,7 +240,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-dark-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
-                    placeholder="farazcui007@gmail.com"
+                    placeholder="your-email@example.com"
                   />
                 </div>
               </div>

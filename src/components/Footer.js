@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com/AhmadFaraz007', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/ahmad-faraz-a47ba4334/', label: 'LinkedIn' },
+    { icon: FiGithub, href: 'https://github.com/MuhammadUmar045', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/muhammad-umar-farooq-034825349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
     { icon: FiTwitter, href: '#', label: 'Twitter' },
-    { icon: FiMail, href: 'mailto:farazcui007@gmail.com', label: 'Email' },
+    { icon: FiMail, href: 'mailto:mumarfarooqkhan45@gmail.com', label: 'Email' },
   ];
 
   const quickLinks = [
@@ -34,7 +34,7 @@ const Footer = () => {
                 transition={{ duration: 0.6 }}
               >
                 <h3 className="text-2xl font-bold gradient-text mb-4">
-                  Your Name
+                  Muhammad Umar Farooq
                 </h3>
                 <p className="text-dark-300 mb-6 leading-relaxed">
                   A passionate Full Stack Web Developer dedicated to creating innovative 
@@ -89,8 +89,8 @@ const Footer = () => {
             >
               <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
               <div className="space-y-3 text-dark-300">
-                <p>farazcui007@gmail.com</p>
-                <p>+92 306 5371114</p>
+                <p>mumarfarooqkhan45@gmail.com</p>
+                <p>+92 3201226433</p>
                 <p>Vehari, Pakistan</p>
               </div>
             </motion.div>
@@ -106,7 +106,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-dark-300">
-              <span>© {currentYear} Your Name. All rights reserved.</span>
+              <span>© {currentYear} Muhammad Umar Farooq. All rights reserved.</span>
             </div>
             <div className="flex items-center space-x-2 text-dark-300">
               <span>Made with</span>

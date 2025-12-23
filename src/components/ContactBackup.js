@@ -33,7 +33,7 @@ const ContactBackup = () => {
     
     try {
       // Alternative approach: Open user's default email client
-      const mailtoLink = `mailto:farazcui007@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      const mailtoLink = `mailto:mumarfarooqkhan45@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`;
       
@@ -53,14 +53,14 @@ const ContactBackup = () => {
     {
       icon: FiMail,
       title: 'Email',
-      value: 'farazcui007@gmail.com',
-      href: 'mailto:farazcui007@gmail.com',
+      value: 'mumarfarooqkhan45@gmail.com',
+      href: 'mailto:mumarfarooqkhan45@gmail.com',
     },
     {
       icon: FiPhone,
       title: 'Phone',
-      value: '+92 306 5371114',
-      href: 'tel:+923065371114',
+      value: '+92 320 1226433',
+      href: 'tel:+923201226433',
     },
     {
       icon: FiMapPin,

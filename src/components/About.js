@@ -10,9 +10,9 @@ const About = () => {
   });
 
   const stats = [
-    { icon: FiCode, number: '50+', label: 'Projects Completed' },
-    { icon: FiUsers, number: '30+', label: 'Happy Clients' },
-    { icon: FiAward, number: '5+', label: 'Years Experience' },
+    { icon: FiCode, number: '30+', label: 'Projects Completed' },
+    { icon: FiUsers, number: '20+', label: 'Happy Clients' },
+    { icon: FiAward, number: '3+', label: 'Years Experience' },
     { icon: FiCoffee, number: '1000+', label: 'Cups of Coffee' },
   ];
 
@@ -52,8 +52,8 @@ const About = () => {
             <div className="relative z-10">
               <div className="w-full h-full rounded-2xl overflow-hidden">
                 <img
-                  src="/ahmad-faraz.png"
-                  alt="Ahmad Faraz"
+                  src={`${process.env.PUBLIC_URL}/umar.png`}
+                  alt="Muhammad Umar Farooq"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.style.display = 'none';
@@ -63,8 +63,8 @@ const About = () => {
                 <div className="w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center" style={{ display: 'none' }}>
                   <div className="text-center text-primary-600">
                     <div className="text-6xl mb-4">👨‍💻</div>
-                    <p className="text-lg font-medium">Ahmad Faraz</p>
-                    <p className="text-sm opacity-75">Add your photo to public/ahmad-faraz.jpg</p>
+                    <p className="text-lg font-medium">Muhammad Umar Farooq</p>
+                    <p className="text-sm opacity-75">Add your photo to public/umar.png</p>
                   </div>
                 </div>
               </div>
@@ -114,8 +114,8 @@ const About = () => {
             {/* CTA Button */}
             <motion.div variants={itemVariants} className="pt-6 flex gap-4">
               <a
-                href="/Ahmad_Faraz_CV.pdf"
-                download="Ahmad_Faraz_CV.pdf"
+                href="/umar_cv.pdf"
+                download="umar_cv.pdf"
                 className="btn-secondary inline-flex items-center gap-2"
               >
                 Download CV
@@ -124,8 +124,8 @@ const About = () => {
                 </svg>
               </a>
               <a
-                href="/Ahmad_Faraz_Resume.pdf"
-                download="Ahmad_Faraz_Resume.pdf"
+                href="/Muhammad_Umar_Farooq_Resume.pdf"
+                download="Muhammad_Umar_Farooq_Resume.pdf"
                 className="btn-primary inline-flex items-center gap-2"
               >
                 Download Resume

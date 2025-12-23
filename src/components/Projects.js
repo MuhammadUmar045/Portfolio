@@ -26,7 +26,7 @@ const Projects = () => {
       image: 'Space-mission.png',
       category: 'fullstack',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com/AhmadFaraz007/AI-Powered-Space-Mission-and-Satellite-Tracking-System-',
+      github: 'https://github.com/MuhammadUmar045/AI-Powered-Space-Mission-and-Satellite-Tracking-System-',
       live: null, // No live demo available yet
       featured: true,
     },
@@ -37,7 +37,7 @@ const Projects = () => {
       image: 'Multi-Vendor.png',
       category: 'fullstack',
       technologies: ['PHP', 'MySQL', 'Tailwind CSS'],
-      github: 'https://github.com/AhmadFaraz007/Multi-Vendor-Ecommerce',
+      github: 'https://github.com/MuhammadUmar045/Multi-Vendor-Ecommerce',
       live: null, // No live demo available yet
       featured: true,
     },
@@ -48,7 +48,7 @@ const Projects = () => {
       image: 'Wordpress-panel.png',
       category: 'fullstack',
       technologies: ['PHP', 'JavaScript', 'CSS3'],
-      github: 'https://github.com/AhmadFaraz007/WordPress-Administration-Panel',
+      github: 'https://github.com/MuhammadUmar045/WordPress-Administration-Panel',
       live: null, // No live demo available yet
       featured: false,
     },
@@ -59,7 +59,7 @@ const Projects = () => {
       image: 'SmartEDU-Portal.png',
       category: 'fullstack',
       technologies: ['Javascript', 'PHP', 'MySQL'],
-      github: 'https://github.com/AhmadFaraz007/SmartEducation_Portal',
+      github: 'https://github.com/MuhammadUmar045/SmartEducation_Portal',
       live: null, // No live demo available yet
       featured: false,
     },
@@ -70,7 +70,7 @@ const Projects = () => {
       image: 'CineScope.png',
       category: 'frontend',
       technologies: ['AJAX', 'PHP', 'MySQL', 'JavaScript'],
-      github: 'https://github.com/AhmadFaraz007/Movie-Catalog-Web-App',
+      github: 'https://github.com/MuhammadUmar045/Movie-Catalog-Web-App',
       live: null, // No live demo available yet
       featured: false,
     },
@@ -81,7 +81,7 @@ const Projects = () => {
       image: 'Flexfusion.png',
       category: 'mobile',
       technologies: ['BootStrap', 'JavaScript', 'PHP'],
-      github: 'https://github.com/AhmadFaraz007/GYM-Management-System',
+      github: 'https://github.com/MuhammadUmar045/GYM-Management-System',
       live: null, // No live demo available yet
       featured: false,
     },
@@ -242,7 +242,7 @@ const Projects = () => {
             Want to see more of my work?
           </p>
           <button
-            onClick={() => window.open('https://github.com/AhmadFaraz007', '_blank')}
+            onClick={() => window.open('https://github.com/MuhammadUmar045', '_blank')}
             className="btn-primary inline-flex items-center gap-2"
           >
             <FiGithub size={20} />
