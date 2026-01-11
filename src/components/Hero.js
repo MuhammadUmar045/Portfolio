@@ -44,7 +44,7 @@ const Hero = () => {
               className="text-5xl lg:text-6xl font-bold text-dark-900 leading-tight"
             >
               Freelance{' '}
-              <span className="gradient-text">Web Developer</span>
+              <span className="gradient-text">AI/ML Expert & Web Developer</span>
             </motion.h1>
 
             {/* Description */}
@@ -54,8 +54,9 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg text-dark-600 leading-relaxed max-w-lg"
             >
-              I create modern, responsive web applications with clean code and exceptional user experiences. 
-              Passionate about turning ideas into reality through innovative web solutions.
+              I build modern, responsive web applications with a focus on clean code and seamless user experiences. Passionate about innovation, 
+              I combine robust Web Development with advanced AI/ML expertise to turn your 
+              visionary ideas into powerful, intelligent realities
             </motion.p>
 
             {/* CTA Buttons */}

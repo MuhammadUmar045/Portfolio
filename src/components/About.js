@@ -81,19 +81,19 @@ const About = () => {
             </div>
 
             <div className="space-y-4 text-dark-600 leading-relaxed">
-              <p>
-                I'm a passionate Full Stack Web Developer with a strong foundation in modern web technologies. 
-                I love creating elegant solutions to complex problems and building applications that make a difference.
-              </p>
-              <p>
-                With expertise in both frontend and backend development, I specialize in creating responsive, 
-                user-friendly web applications that deliver exceptional user experiences. I'm constantly 
-                learning and staying up-to-date with the latest industry trends and best practices.
-              </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                projects, or sharing knowledge with the developer community.
-              </p>
+            <p>
+  I am a dedicated Full Stack Web Developer focused on engineering scalable and efficient web solutions. 
+  I specialize in transforming complex requirements into intuitive, high-performance applications that drive real business value.
+</p>
+<p>
+  Bridging the gap between frontend aesthetics and backend stability, I build responsive systems that prioritize 
+  user engagement and security. I remain committed to continuous integration of emerging technologies and industry standards 
+  to ensure every project is future-proof.
+</p>
+<p>
+  Beyond the code, I am an active contributor to the open-source ecosystem and enjoy mentoring peers 
+  within the developer community to foster collective growth and innovation.
+</p>
             </div>
 
             {/* Stats */}

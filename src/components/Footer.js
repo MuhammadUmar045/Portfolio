@@ -7,8 +7,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: FiGithub, href: 'https://github.com/MuhammadUmar045', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/muhammad-umar-farooq-034825349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
-    { icon: FiTwitter, href: '#', label: 'Twitter' },
+    { icon: FiLinkedin, href: 'www.linkedin.com/in/muhammadumar-farooq', label: 'LinkedIn' },
     { icon: FiMail, href: 'mailto:mumarfarooqkhan45@gmail.com', label: 'Email' },
   ];
 
@@ -37,8 +36,7 @@ const Footer = () => {
                   Muhammad Umar Farooq
                 </h3>
                 <p className="text-dark-300 mb-6 leading-relaxed">
-                  A passionate Full Stack Web Developer dedicated to creating innovative 
-                  and user-friendly web applications that make a difference.
+                  I build modern, responsive web applications with a focus on clean code and seamless user experiences. Passionate about innovation, I combine robust Web Development with advanced AI/ML expertise to turn your visionary ideas into powerful, intelligent realities
                 </p>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (

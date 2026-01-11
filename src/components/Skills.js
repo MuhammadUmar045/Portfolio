@@ -10,6 +10,16 @@ const Skills = () => {
 
   const skillCategories = [
     {
+      title: 'Aritificial Intelligence',
+      skills: [
+        { name: 'Machine Learning', level: 90 },
+        { name: 'Deep Learning', level: 85 },
+        { name: 'Langchain', level: 85 },
+        { name: 'RAG', level: 80 },
+        { name: 'Transformer Models', level: 80 },
+      ],
+    },
+    {
       title: 'Frontend',
       skills: [
         { name: 'React', level: 90 },
