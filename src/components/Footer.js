@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiHeart } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { icon: FiGithub, href: 'https://github.com/MuhammadUmar045', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'www.linkedin.com/in/muhammadumar-farooq', label: 'LinkedIn' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/muhammadumar-farooq', label: 'LinkedIn' },
     { icon: FiMail, href: 'mailto:mumarfarooqkhan45@gmail.com', label: 'Email' },
   ];
 
