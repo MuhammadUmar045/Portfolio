@@ -50,7 +50,7 @@ const About = () => {
           {/* Left Column - Image */}
           <motion.div variants={itemVariants} className="relative">
             <div className="relative z-10">
-              <div className="w-full h-full rounded-2xl overflow-hidden">
+              <div className="w-full aspect-[4/5] sm:aspect-[16/10] lg:aspect-[4/5] rounded-2xl overflow-hidden">
                 <img
                   src={`${process.env.PUBLIC_URL}/umar.png`}
                   alt="Muhammad Umar Farooq"
@@ -97,7 +97,7 @@ const About = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -112,11 +112,11 @@ const About = () => {
             </div>
 
             {/* CTA Button */}
-            <motion.div variants={itemVariants} className="pt-6 flex gap-4">
+            <motion.div variants={itemVariants} className="pt-6 flex flex-col sm:flex-row gap-4">
               <a
                 href="/umar_cv.pdf"
                 download="umar_cv.pdf"
-                className="btn-secondary inline-flex items-center gap-2"
+                className="btn-secondary inline-flex items-center gap-2 justify-center"
               >
                 Download CV
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,7 +126,7 @@ const About = () => {
               <a
                 href="/Muhammad_Umar_Farooq_Resume.pdf"
                 download="Muhammad_Umar_Farooq_Resume.pdf"
-                className="btn-primary inline-flex items-center gap-2"
+                className="btn-primary inline-flex items-center gap-2 justify-center"
               >
                 Download Resume
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

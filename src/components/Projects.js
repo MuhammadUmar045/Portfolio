@@ -144,7 +144,7 @@ const Projects = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+              className={`px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full font-medium transition-all duration-200 ${
                 activeFilter === filter.id
                   ? 'bg-primary-600 text-white shadow-lg'
                   : 'bg-dark-100 text-dark-600 hover:bg-dark-200'

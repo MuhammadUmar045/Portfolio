@@ -6,21 +6,21 @@ const Hero = () => {
   const [heroImageError, setHeroImageError] = useState(false);
 
   return (
-    <section id="home" className="min-h-screen flex items-center bg-white relative overflow-hidden">
-      <div className="grid lg:grid-cols-2 gap-0 items-center w-full h-full">
+    <section id="home" className="min-h-screen flex items-start lg:items-center bg-white relative overflow-hidden">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-0 items-center w-full">
         {/* Left Column - Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-8 px-8 lg:px-16 xl:px-24"
+          className="space-y-6 sm:space-y-8 px-4 sm:px-6 lg:px-16 xl:px-24 py-12 lg:py-0 max-w-2xl lg:max-w-none mx-auto lg:mx-0"
         >
             {/* Greeting Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-3xl lg:text-4xl font-bold gradient-text"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold gradient-text"
             >
               <span className="mr-2">👋</span>
               Hi! I'm Muhammad Umar Farooq
@@ -41,7 +41,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-5xl lg:text-6xl font-bold text-dark-900 leading-tight"
+              className="text-3xl sm:text-4xl lg:text-6xl font-bold text-dark-900 leading-tight"
             >
               Freelance{' '}
               <span className="gradient-text">AI/ML Expert & Web Developer</span>
@@ -52,7 +52,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-lg text-dark-600 leading-relaxed max-w-lg"
+              className="text-base sm:text-lg text-dark-600 leading-relaxed max-w-lg"
             >
               I build modern, responsive web applications with a focus on clean code and seamless user experiences. Passionate about innovation, 
               I combine robust Web Development with advanced AI/ML expertise to turn your 
@@ -96,7 +96,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className="grid grid-cols-3 gap-6 pt-8"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8"
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary-600 mb-1">20+</div>
@@ -118,7 +118,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative min-h-screen w-full h-full bg-gradient-to-br from-blue-800 via-indigo-900 to-slate-800 flex items-center justify-center"
+            className="relative w-full bg-gradient-to-br from-blue-800 via-indigo-900 to-slate-800 flex items-center justify-center min-h-[380px] sm:min-h-[460px] lg:min-h-screen py-10 lg:py-0"
           >
             {/* Photo - Enhanced with visual harmony */}
             <div className="relative z-20 flex items-center justify-center p-4">
@@ -126,7 +126,7 @@ const Hero = () => {
                 <img
                   src={`${process.env.PUBLIC_URL}/umar.png`}
                   alt="Muhammad Umar Farooq"
-                  className="w-auto h-auto max-w-[420px] max-h-[85vh] object-contain rounded-xl shadow-lg"
+                  className="w-auto h-auto max-w-[280px] sm:max-w-[360px] lg:max-w-[420px] max-h-[60vh] sm:max-h-[70vh] lg:max-h-[85vh] object-contain rounded-xl shadow-lg"
                   onError={() => setHeroImageError(true)}
                   style={{
                     boxShadow: '0 15px 35px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15)',

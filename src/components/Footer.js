@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-dark-900 text-white">
-      <div className="container-max">
+      <div className="container-max px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -114,20 +114,6 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Back to Top Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors duration-200 z-40"
-        aria-label="Back to top"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </motion.button>
     </footer>
   );
 };

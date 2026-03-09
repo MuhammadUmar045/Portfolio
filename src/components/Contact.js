@@ -167,14 +167,14 @@ const Contact = () => {
                   key={info.title}
                   href={info.href}
                   variants={itemVariants}
-                  className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 group"
+                  className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 group min-w-0"
                 >
                   <div className="p-3 bg-primary-100 rounded-lg group-hover:bg-primary-200 transition-colors duration-200">
                     <info.icon className="text-primary-600" size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-semibold text-dark-900">{info.title}</h4>
-                    <p className="text-dark-600">{info.value}</p>
+                    <p className="text-dark-600 break-words">{info.value}</p>
                   </div>
                 </motion.a>
               ))}
@@ -191,7 +191,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div variants={itemVariants} className="bg-white p-8 rounded-2xl shadow-lg">
+          <motion.div variants={itemVariants} className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-bold text-dark-900 mb-6">
               Send Message
             </h3>

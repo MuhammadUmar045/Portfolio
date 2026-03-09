@@ -127,7 +127,7 @@ function App() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors duration-200 z-40"
+          className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors duration-200 z-40"
         >
           <FiChevronUp size={20} />
         </motion.button>
